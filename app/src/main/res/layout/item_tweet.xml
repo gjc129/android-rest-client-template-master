@@ -30,4 +30,14 @@
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/ivProfileImage"
         tools:text="This is the contents of the tweet body." />
+
+    <TextView
+        android:id="@+id/tvCreatedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        tools:text="3h" />
 </RelativeLayout>

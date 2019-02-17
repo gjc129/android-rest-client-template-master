@@ -1,5 +1,7 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import com.codepath.apps.restclienttemplate.TimeFormatter;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -10,15 +12,21 @@ public class Tweet
     public String createdAt;
     public User user;
 
+
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
+
         Tweet tweet = new Tweet();
+        String timeStamp = "test";
 
         tweet.body = jsonObject.getString("text");
         tweet.uid = jsonObject.getLong("id");
-        tweet.createdAt = jsonObject.getString("created_at");
+        timeStamp = jsonObject.getString("created_at");
+        tweet.createdAt = TimeFormatter.getTimeDifference(timeStamp);
         tweet.user = User.fromJson(jsonObject.getJSONObject("user"));
 
         return tweet;
 
     }
+
+
 }
