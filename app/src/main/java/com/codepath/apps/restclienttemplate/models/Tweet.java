@@ -16,7 +16,7 @@ public class Tweet
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
 
         Tweet tweet = new Tweet();
-        String timeStamp = "test";
+        String timeStamp;
 
         tweet.body = jsonObject.getString("text");
         tweet.uid = jsonObject.getLong("id");
