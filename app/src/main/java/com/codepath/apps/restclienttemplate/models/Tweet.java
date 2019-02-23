@@ -4,7 +4,9 @@ import com.codepath.apps.restclienttemplate.TimeFormatter;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
+@Parcel
 public class Tweet
 {
     public String body;
@@ -12,6 +14,11 @@ public class Tweet
     public String createdAt;
     public User user;
 
+    //emppty constructor needed by the parceler library
+    public Tweet()
+    {
+
+    }
 
     public static Tweet fromJson(JSONObject jsonObject) throws JSONException {
 
