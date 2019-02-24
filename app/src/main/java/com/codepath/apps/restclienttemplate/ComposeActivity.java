@@ -57,9 +57,11 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count)
             {
-                charLength = String.valueOf(s.length());
                 int counterValue = s.length();
+
+                charLength = String.valueOf(s.length());
                 tvCharacters.setText(charLength);
+
                 if(counterValue >= MAX_TWEET_LENGTH)
                 {
                     tvCharacters.setTextColor(Color.RED);

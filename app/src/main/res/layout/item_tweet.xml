@@ -29,7 +29,9 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/ivProfileImage"
-        tools:text="This is the contents of the tweet body." />
+        tools:text="This is the contents of the tweet body."
+        android:autoLink="all"
+        android:linksClickable="true"/>
 
     <TextView
         android:id="@+id/tvCreatedAt"
